@@ -1,47 +1,15 @@
-# charity: water – Water Quest Game Starter
+# charity: water – Water Quest
 
-In this game, users tap charity: water’s signature yellow jerry cans as fast as they can to earn points. You’ll be working from a partially built version of the game. Some functionality is already provided, and your job is to complete the rest.
+Water Quest is a quick arcade game: tap the yellow water cans as they appear to score points. Choose a difficulty before each round:
 
-## What’s Already Done
+| Difficulty | Goal | Time | Can appears every |
+| --- | ---: | ---: | ---: |
+| Easy | 12 cans | 45 seconds | 1.4 seconds |
+| Normal | 20 cans | 30 seconds | 1 second |
+| Hard | 25 cans | 25 seconds | 0.7 seconds |
 
-The starter files already include:
+Each can is worth one point and disappears when tapped. Collecting a can, missing a can, clicking a game control, reaching a milestone, and winning play sound effects. Milestone messages appear at a quarter, halfway, and three-quarters of the selected goal. A round ends when time runs out, the goal is reached, or you press Stop game. Starting another round resets your score and timer.
 
-- A **heading and tagline**
-- A **start button**
-- A **game container** displaying a grid
-- A **placeholder timer and score** (not functional yet)
-- A **logo image** from charity: water
-- Working code that:
-  - Starts the game when the start button is clicked  
-  - Makes jerry cans pop up randomly
+The game uses the included charity: water logo and water-can artwork, with responsive styling and keyboard-accessible game cells.
 
-## What You Need to Add
-
-Here’s what you're required to implement to bring the game to life:
-
-### Game Functionality
-
-- **Update the score**
-  - +1 point for each can clicked  
-
-- **Add a 30-second timer**
-  - When the timer reaches 0, the game ends  
-
-- **Display a message when the game ends**
-  - If the player scores **20 or more points**, show a **winning** message  
-  - If the player scores **less than 20 points**, show a **"try again"** message  
-  - Create one array of possible winning messages and one array of losing messages  
-  - Depending on whether the user wins or loses, randomly pick and display a message from the appropriate array  
-
-### Visual Styling
-
-- **Add charity: water branding**
-  
-  - Use the provided logo  
-  - Use the [charity: water brand guidelines](https://drive.google.com/file/d/1ct4zYRIwHAtxoNQoeaVwWYPdnruSC6sr/view) to stay on-brand with colors and styling
-  - Add styling rules to ensure your game layout adjusts well across different screen sizes
-
-These are the minimum requirements, but if you'd like an additional challenge go ahead and give the LevelUps a shot! For example, you could add logic to decrease the user's score if they miss a jerry can. Have fun and make the game your own!
-
-If you have any questions or need any assistance with your code, reach out to the HelpHub or attend a Drop-In Hour. You got this!!
-
+The page footer links to charity: water, its donation page, monthly giving through The Spring, and water project sponsorship. Game text uses Lato as a close substitute for the Proxima Nova typography named in charity: water's brand guidelines, with system font fallbacks. Sound effects are synthesized locally with the Web Audio API, so no additional audio downloads are needed.

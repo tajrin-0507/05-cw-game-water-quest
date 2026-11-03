@@ -2,21 +2,55 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Water Quest</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div class="container">
-    <h1>Water Quest</h1>
-    <p class="game-instructions">Collect 20 items to complete the game!</p>
-    <div class="stats">
-      <p>Cans Collected: <span id="current-cans">0</span></p>
-      <p>Time Left: <span id="timer">30</span>s</p>
+    <header class="game-header">
+      <img class="brand-logo" src="img/cw_logo_horizontal.png" alt="charity: water">
+      <p class="eyebrow">A quick arcade challenge</p>
+      <h1>Water Quest</h1>
+      <p class="game-instructions" id="game-instructions">Collect 20 water cans in 30 seconds. Each can is worth one point.</p>
+    </header>
+
+    <section class="game-panel" aria-label="Water Quest game">
+      <div class="game-settings">
+        <label for="difficulty">Choose your difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="stats" aria-label="Game stats">
+        <p>Water cans <span id="current-cans">0</span></p>
+        <p>Goal <span id="goal">20</span></p>
+        <p>Time <span class="time-value"><span id="timer">30</span><span class="seconds">s</span></span></p>
+      </div>
+
+      <p id="achievements" class="achievement" role="status" aria-live="polite">Choose a difficulty and start when you’re ready.</p>
+      <div class="game-grid" aria-label="Game board"></div>
+      <button id="start-game" type="button">Start game</button>
+      <button id="stop-game" type="button" hidden>Stop game</button>
     </div>
-    <div id="achievements" class="achievement"></div>
-    <div class="game-grid"></div>
-    <button id="start-game">Start Game</button>
+
+    <p class="game-note">Tap a can as soon as it appears. The round ends when time runs out or you reach the goal.</p>
+
+    <footer class="site-footer">
+      <p>Want to learn more or support clean water?</p>
+      <nav aria-label="charity: water links">
+        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">Visit charity: water</a>
+        <a href="https://www.charitywater.org/donate" target="_blank" rel="noopener noreferrer">Make a donation</a>
+        <a href="https://www.charitywater.org/donate/the-spring" target="_blank" rel="noopener noreferrer">Give monthly with The Spring</a>
+        <a href="https://www.charitywater.org/donate/water-project-sponsorship" target="_blank" rel="noopener noreferrer">Sponsor a water project</a>
+      </nav>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
